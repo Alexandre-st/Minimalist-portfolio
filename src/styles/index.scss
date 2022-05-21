@@ -2,8 +2,11 @@
 @use "./base/reset";
 @use "./base/base";
 
-// == COMPONENT == //
-@use "../components/Header/header";
+// == LAYOUTS == //
+@use "../layouts/Header/header";
+
+// == COMPONENTS == //
+@use "../components/TalkComponent/talkComponent";
 
 // == PAGE == //
 @use "../pages/Home/home";

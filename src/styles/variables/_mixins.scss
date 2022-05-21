@@ -16,3 +16,13 @@
     }
   }
 }
+
+// For Button
+@mixin button {
+  border: 1px solid #33323D;
+  padding: 17px 0 17px 0;
+  height: 4.8rem;
+  text-align: center;
+  color: #33323D;
+
+}
