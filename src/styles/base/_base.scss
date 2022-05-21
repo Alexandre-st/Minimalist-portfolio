@@ -13,13 +13,27 @@ h1, h2, h3 {
   max-width: 111rem;
   margin: auto;
   padding: 0 3.2rem;
+
+  @include mq(tablet) {
+    padding: 0 4.1rem 0 3.9rem;
+  }
+
+  @include mq(desktop) {
+    padding: 0;
+  }
 }
 
 .big-title {
-  font-size: 5rem;
-  line-height: 5rem;
-  letter-spacing: -0.446429px;
   font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.357143px;
+
+  @include mq(laptop) {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: -0.446429px;
+  }
 }
 
 .middle-title {
@@ -66,4 +80,10 @@ h1, h2, h3 {
   &-black {
     color: #33323D;
   }
+}
+
+.button {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: 2px;
 }

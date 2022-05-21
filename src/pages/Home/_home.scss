@@ -1,0 +1,67 @@
+@use '../../styles/variables/mixins' as *;
+
+.hero {
+
+  &-img {
+    max-width: 40.2rem;
+    margin: auto;
+
+    @include mq(tablet) {
+      max-width: none;
+      position: relative;
+    }
+  }
+
+  &-text {
+    margin-top: 2.4rem;
+
+    @include mq(tablet) {
+      position: absolute;
+      max-width: 51.4rem;
+      background-color: #FFFFFF;
+      bottom: 0;
+      margin-top: 0;
+      padding: 5.6rem 5.6rem 0 0;
+    }
+
+    @include mq(laptop) {
+      max-width: 44.5rem;
+      left: -1px;
+      bottom: -1px;
+    }
+  }
+}
+
+// Specific button of the homePage
+.button-hero {
+  display: flex;
+  background-color: #203A4C;
+  width: 20rem;
+  margin-top: 3.2rem;
+
+  @include mq(laptop) {
+    margin-top: 5.3rem;
+  }
+
+  &-img {
+    position: relative;
+    flex: 1;
+    width: 4.8rem;
+    height: 4.8rem;
+    background: #000000;
+    opacity: 0.1;
+  }
+
+  img {
+    position: absolute;
+    width: fit-content;
+    padding: 1.8rem 1.6rem;
+  }
+
+  &-text {
+    flex: 3;
+    color: #FFFFFF;
+    padding: 1.7rem 0;
+    text-align: center;
+  }
+}
