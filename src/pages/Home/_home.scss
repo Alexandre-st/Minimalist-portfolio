@@ -1,5 +1,6 @@
 @use '../../styles/variables/mixins' as *;
 
+// HERO PART
 .hero {
 
   &-img {
@@ -28,6 +29,55 @@
       max-width: 44.5rem;
       left: -1px;
       bottom: -1px;
+    }
+  }
+}
+
+// ABOUT PART
+.about {
+  margin-top: 9.6rem;
+
+  &-container {
+    @include mq(tablet) {
+      display: flex;
+      gap: 6.9rem;
+    }
+
+    @include mq(laptop) {
+      gap: 12.5rem;
+    }
+  }
+
+  &-img {
+    max-width: 46rem;
+
+    @include mq(tablet) {
+      max-width: none;
+    }
+  }
+
+  &-content {
+    margin-top: 3.2rem;
+
+    @include mq(tablet) {
+      flex: 1;
+      margin-top: 0;
+    }
+
+    @include mq(tablet) {
+      max-width: 35rem;
+    }
+
+    &-text {
+      margin: 3.2rem 0 5.1rem 0;
+
+      @include mq(tablet) {
+        margin: 5rem 0 4.6rem 0;
+      }
+
+      p {
+        margin: 2.8rem 0 2.4rem;
+      }
     }
   }
 }
