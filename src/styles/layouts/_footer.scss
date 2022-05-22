@@ -1,0 +1,58 @@
+@use '../variables/mixins' as *;
+
+.footer {
+  background-color: #33323D;
+
+  &-container {
+    padding: 5.6rem 13.5rem;
+
+    @include mq(tablet) {
+      display: flex;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-content {
+    text-align: center;
+    
+    @include mq(tablet) {
+      display: flex;
+    }
+
+    &-img {
+      width: fit-content;
+      margin: auto;
+    }
+
+    &-links {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+
+      @include mq(tablet) {
+        flex-direction: row;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &-social {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4rem;
+    gap: 1.5rem;
+
+    @include mq(tablet) {
+      margin-top: 0;
+    }
+
+    img {
+      filter: brightness(0) invert(1);
+      width: auto;
+    }
+  }
+}

@@ -3,10 +3,11 @@
 @use "./base/base";
 
 // == LAYOUTS == //
-@use "../layouts/Header/header";
+@use "./layouts/header";
+@use "./layouts/footer";
 
 // == COMPONENTS == //
-@use "../components/TalkComponent/talkComponent";
+@use "./components/talkComponent";
 
 // == PAGE == //
-@use "../pages/Home/home";
+@use "./pages/home";
