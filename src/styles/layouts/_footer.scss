@@ -5,12 +5,18 @@
 
   &-container {
     padding: 5.6rem 13.5rem;
+    max-width: 111rem;
+    margin: auto;
 
     @include mq(tablet) {
       display: flex;
-      padding: 0;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      padding: 2.4rem 3.9rem;
+    }
+
+    @include mq(desktop) {
+      padding: 2.4rem 0;
     }
   }
 
@@ -19,6 +25,8 @@
     
     @include mq(tablet) {
       display: flex;
+      align-items: center;
+      gap: 4.8rem;
     }
 
     &-img {
@@ -35,6 +43,7 @@
       @include mq(tablet) {
         flex-direction: row;
         margin-top: 0;
+        gap: 4.2rem;
       }
     }
   }
@@ -47,7 +56,11 @@
     gap: 1.5rem;
 
     @include mq(tablet) {
-      margin-top: 0;
+      margin: 0;
+      justify-content: end;
+      align-items: center;
+      max-width: 2.4rem;
+      max-height: 2.4rem;
     }
 
     img {
