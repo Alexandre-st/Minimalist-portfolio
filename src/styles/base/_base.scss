@@ -53,6 +53,10 @@ h1, h2, h3 {
 .small-text {
   font-size: 1.5rem;
   line-height: 3rem;
+
+  @include mq(laptop) {
+    font-size: 1.6rem;
+  }
 }
 
 .text {
@@ -95,6 +99,11 @@ h1, h2, h3 {
   &-contact {
     @include button;
     width: 16.2rem;
+  }
+  
+  &-project {
+    @include button;
+    width: 17.5rem;
   }
 }
 

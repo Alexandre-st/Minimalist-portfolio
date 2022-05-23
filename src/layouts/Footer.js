@@ -14,9 +14,15 @@ const Footer = () => {
             <img src={LogoImg} alt="" />
           </div>
           <ul className="footer-content-links">
-            <li className="nav-link"><Link to="/">HOME</Link></li>
-            <li className="nav-link"><Link to="/">PORTFOLIO</Link></li>
-            <li className="nav-link"><Link to="/">CONTACT ME</Link></li>
+            <li className="nav-link">
+              <Link to="/">HOME</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/portfolio">PORTFOLIO</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/">CONTACT ME</Link>
+            </li>
           </ul>
         </div>
         <div className="footer-social">

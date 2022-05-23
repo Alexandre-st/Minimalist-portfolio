@@ -13,9 +13,15 @@ const Header = () => {
 
         <nav className="header-nav">
           <ul className="header-nav-list">
-            <li className="nav-link nav-link-black"><Link to="/">HOME</Link></li>
-            <li className="nav-link nav-link-black"><Link to="/">PORTFOLIO</Link></li>
-            <li className="nav-link nav-link-black"><Link to="/">CONTACT ME</Link></li>
+            <li className="nav-link nav-link-black">
+              <Link to="/">HOME</Link>
+            </li>
+            <li className="nav-link nav-link-black">
+              <Link to="/portfolio">PORTFOLIO</Link>
+            </li>
+            <li className="nav-link nav-link-black">
+              <Link to="/">CONTACT ME</Link>
+            </li>
           </ul>
         </nav>
         

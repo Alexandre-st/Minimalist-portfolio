@@ -1,0 +1,74 @@
+@use '../variables/mixins' as *;
+
+.project {
+
+  @include mq(tablet) {
+    margin-top: 5.5rem;
+  }
+
+  // To give a margin to the different sections
+  &-top {
+    margin-top: 7.2rem;
+
+    @include mq(tablet) {
+      margin-top: 8rem;
+    }
+  }
+
+  &-container {
+    @include mq(tablet) {
+      display: flex;
+      align-items: center;
+      gap: 6.9rem;
+    }
+
+    @include mq(laptop) {
+      max-width: 101.5rem;
+      gap: 12.5rem;
+    }
+
+    &-reverse {
+      @include mq(tablet) {
+        flex-direction: row-reverse;
+      }
+
+      @include mq(laptop) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &-content {
+    margin-top: 3.2rem;
+
+    @include mq(tablet) {
+      flex: 1;
+      margin-top: 0;
+    }
+
+    &-text {
+      margin: 2.5rem 0 2.4rem 0;
+
+      @include mq(tablet) {
+        margin: 3.2rem 0 5rem 0;
+      }
+
+      @include mq(laptop) {
+        margin: 10.3rem 0;
+      }
+
+      p {
+        margin: 2.4rem 0;
+        opacity: 0.8;
+
+        @include mq(tablet) {
+          margin: 2.9rem 0 3.5rem 0;
+        }
+
+        @include mq(laptop) {
+          margin: 2.8 0 2.4rem 0;
+        }
+      }
+    }
+  }
+}

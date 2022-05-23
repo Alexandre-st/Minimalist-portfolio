@@ -19,9 +19,15 @@ const Menu = () => {
           <div className="nav">
             <nav>
               <ul className="nav-list">
-                <li className="nav-link"><Link to="/">HOME</Link></li>
-                <li className="nav-link"><Link to="/">PORTFOLIO</Link></li>
-                <li className="nav-link"><Link to="/">CONTACT ME</Link></li>
+                <li className="nav-link">
+                  <Link to="/">HOME</Link>
+                </li>
+                <li className="nav-link">
+                  <Link to="/portfolio">PORTFOLIO</Link>
+                </li>
+                <li className="nav-link">
+                  <Link to="/">CONTACT ME</Link>
+                </li>
               </ul>
             </nav>
           </div>
