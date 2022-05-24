@@ -53,6 +53,7 @@ h1, h2, h3 {
 .small-text {
   font-size: 1.5rem;
   line-height: 3rem;
+  opacity: 0.8;
 
   @include mq(laptop) {
     font-size: 1.6rem;
@@ -104,6 +105,14 @@ h1, h2, h3 {
   &-project {
     @include button;
     width: 17.5rem;
+  }
+
+  &-form {
+    width: 20rem;
+    height: 4.8rem;
+    background-color: #203A4C;
+    color: #FFFFFF;
+    
   }
 }
 

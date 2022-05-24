@@ -25,3 +25,16 @@
   text-align: center;
   color: #33323D;
 }
+
+// Text ine contact formin
+@mixin text-form {
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 3rem;
+  background-color: #EBEBEC;
+
+  &::placeholder {
+    color: #33323D;
+    opacity: 0.4;
+  }
+}

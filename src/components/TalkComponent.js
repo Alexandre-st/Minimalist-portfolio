@@ -5,7 +5,7 @@ const TalkComponent = () => {
     <section className="talk">
       <h3 className="middle-title">Interested in doing a project together?</h3>
       <div className="border"></div>
-      <Link className="button button-contact" to="/">CONTACT ME</Link>
+      <Link className="button button-contact" to="/contact">CONTACT ME</Link>
     </section>
   );
 }

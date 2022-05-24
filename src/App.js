@@ -5,6 +5,7 @@ import ScrollToTop from './ScrollToTop';
 import Header from './layouts/Header/Header';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
 import Footer from './layouts/Footer';
 
 import './styles/index.scss';
@@ -17,6 +18,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/portfolio" element={<Portfolio />} />
+        <Route exact path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
