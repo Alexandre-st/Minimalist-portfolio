@@ -122,6 +122,11 @@ input, textarea {
     border: 1px solid #5FB4A2;
   }
 
+  // Avoid the yellow autofill from the input form
+  &:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px #EBEBEC inset;
+  }
+
   &:invalid {
     border: 1px solid #F43030;
   }

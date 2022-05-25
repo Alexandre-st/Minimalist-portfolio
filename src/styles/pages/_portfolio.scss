@@ -38,6 +38,16 @@
     }
   }
 
+  &-img {
+    @include mq(tablet) {
+      max-width: 33.9rem;
+    }
+
+    @include mq(laptop) {
+      max-width: 54rem;
+    }
+  }
+
   &-content {
     margin-top: 3.2rem;
 

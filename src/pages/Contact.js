@@ -28,14 +28,11 @@ const Contact = () => {
       }
       return errors;
     }, 
-    onSubmit: (values, { setSubmitting }) => { 
-      console.log("submit", values);
-      setSubmitting(false);
+    onSubmit: (values) => { 
+      // console.log("submit", values);
       formik.resetForm({ values : ''});
     }
   });
-
-  console.log(formik)
   
   return ( 
     <main className="container">

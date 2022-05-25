@@ -52,7 +52,11 @@
     max-width: 46rem;
 
     @include mq(tablet) {
-      max-width: none;
+      max-width: 28.1rem;
+    }
+
+    @include mq(laptop) {
+      max-width: 54rem;
     }
   }
 
