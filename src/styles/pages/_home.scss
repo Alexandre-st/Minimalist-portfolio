@@ -3,16 +3,6 @@
 // HERO PART
 .hero {
 
-  &-img {
-    max-width: 40.2rem;
-    margin: auto;
-
-    @include mq(tablet) {
-      max-width: none;
-      position: relative;
-    }
-  }
-
   &-text {
     margin-top: 2.4rem;
 
