@@ -32,7 +32,7 @@ const Portfolio = () => {
               <p className="small-text">
                 This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.
               </p>
-              <Link className="button button-project" to="/">VIEW PROJECT</Link>
+              <Link className="button button-project" to="/portfolio/manage">VIEW PROJECT</Link>
             </div>
             <div className="border"></div>
           </div>
@@ -53,7 +53,7 @@ const Portfolio = () => {
             <p className="small-text">
               This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.
             </p>
-            <Link className="button button-white" to="/portfolio">VIEW PROJECT</Link>
+            <Link className="button button-white" to="/portfolio/bookmark">VIEW PROJECT</Link>
           </div>
           <div className="border"></div>
         </div>
@@ -74,7 +74,7 @@ const Portfolio = () => {
             <p className="small-text">
               This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.
             </p>
-            <Link className="button button-white" to="/portfolio">VIEW PROJECT</Link>
+            <Link className="button button-white" to="/portfolio/insure">VIEW PROJECT</Link>
           </div>
           <div className="border"></div>
         </div>
