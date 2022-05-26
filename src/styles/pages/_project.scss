@@ -1,9 +1,50 @@
+@use '../variables/mixins' as *;
+
 .details {
-  margin-top: 4rem;
+    margin-top: 4rem;
+
+    @include mq(laptop) {
+      margin-top: 11.5rem;
+      display: flex;
+      gap: 12.5rem;
+
+    }
 
   &-aside {
+
+    &-content {
+      @include mq(tablet) {
+        display: flex;
+        justify-content: space-between;
+
+      }
+
+      &-tablet {
+        display: none;
+
+        @include mq(tablet) {
+          display: block;
+          flex: 1;
+          margin-top: 3.2rem;
+          max-width: 35rem;
+        }
+
+        @include mq(laptop) {
+          display: none;
+        }
+      }
+    }
+
     h1 {
       margin: 2.4rem 0;
+      
+      @include mq(tablet) {
+        margin: 3.2rem 0 1.6rem 0;
+      }
+
+      @include mq(laptop) {
+        margin: 4.8rem 0 2.9rem;
+      }
     }
 
     &-text {
@@ -11,12 +52,38 @@
     }
 
     button {
-      margin-bottom: 2.4rem;
+      margin: 2.4rem 0;
+
+      @include mq(tablet) {
+        margin: 1.6rem 0 3.2rem 0;
+      }
+
+      @include mq(laptop) {
+        margin: 3.2rem 0 4rem 0;
+      }
+    }
+
+    &-normal-text {
+      @include mq(tablet) {
+        display: none;
+      }
+
+      @include mq(laptop) {
+        display: block;
+      }
     }
   }
 
   &-content {
     margin: 4.8rem 0 6.4rem 0;
+
+    @include mq(tablet) {
+      margin: 4rem 0 8rem 0;
+    }
+
+    @include mq(laptop) {
+      margin: 0 0 6.4rem 0;
+    }
 
     p {
       margin: 2.8rem 0 4rem 0;
@@ -24,12 +91,16 @@
 
     &-preview {
       margin: 4rem 0 3.2rem 0;
+
+      @include mq(laptop) {
+        margin: 2.8rem 0 3.2rem 0;
+      }
     }
   }
 }
 
 // For the link of other project
-.project {
+.project-link {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   display: flex;
@@ -37,8 +108,17 @@
 
   &-right, &-left {
     margin: 2.4rem 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 
-    .project-link {
+    @include mq(tablet) {
+      flex-direction: row;
+      align-items: center;
+      gap: 3.2rem;
+    }
+
+    .project-link-title {
       margin: 1.6rem 0 -0.5rem 0;
       &::first-letter {
         text-transform: uppercase;
@@ -57,9 +137,12 @@
 
   &-right {
     text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
+
+    @include mq(tablet) {
+      flex-direction: row-reverse;
+      align-items: center;
+    }
   }
 
   .border-rotate {

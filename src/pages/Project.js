@@ -37,13 +37,20 @@ const Project = () => {
           <section className="details">
             <aside className="details-aside">
               <div className="border" />
-              <h1 className="middle-title">{project.title}</h1>
-              <p className="small-text">{project.infos}</p>
-              <div className="details-aside-text">
-                <p className="text-infos">{project.type}</p>
-                <p className="text-infos">{project.technos}</p>
+              <div className="details-aside-content">
+                <div className="details-aside-aside">
+                  <h1 className="middle-title">{project.title}</h1>
+                  <p className="details-aside-normal-text small-text">{project.infos}</p>
+                  <div className="details-aside-text">
+                    <p className="text-infos">{project.type}</p>
+                    <p className="text-infos">{project.technos.join(' / ')}</p>
+                    <button className="button button-project">VIEW PROJECT</button>
+                  </div>
+                </div>
+                <div className="details-aside-content-tablet">
+                  <p className="small-text">{project.infos}</p>
+                </div>
               </div>
-              <button className="button button-project">VIEW PROJECT</button>
               <div className="border" />
             </aside>
 
@@ -77,19 +84,19 @@ const Project = () => {
             </div>
           </section>
 
-          <section className="project">
-            <div className="project-left">
-              <img className="project-img" src={ArrowLeft} alt="Arrow towards the previous project" />
+          <section className="project-link">
+            <div className="project-link-left">
+              <img className="project-link-img" src={ArrowLeft} alt="Arrow towards the previous project" />
               <Link to={`/portfolio/${project.previousProject}`}>
-                <h4 className="little-title project-link">{project.previousProject}</h4>
+                <h4 className="little-title project-link-title">{project.previousProject}</h4>
                 <p className="text">Previous Project</p>
               </Link>
             </div>
             <div className="border border-rotate" />
-            <div className="project-right">
-              <img className="project-img" src={ArrowRight} alt="Arrow towards the next project" />
+            <div className="project-link-right">
+              <img className="project-link-img" src={ArrowRight} alt="Arrow towards the next project" />
               <Link to={`/portfolio/${project.nextProject}`}>
-                <h4 className="little-title project-link">{project.nextProject}</h4>
+                <h4 className="little-title project-link-title">{project.nextProject}</h4>
                 <p className="small-text">Next Project</p>
               </Link>
             </div>
