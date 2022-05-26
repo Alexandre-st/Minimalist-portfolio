@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 
 import HeroImg from '../assets/homepage/mobile/image-homepage-hero@2x.jpg';
 import HeroImgTablet from '../assets/homepage/tablet/image-homepage-hero@2x.jpg';
@@ -23,19 +25,19 @@ const Home = () => {
               <h1 className="big-title">
                 Hey, I’m Alex Spencer and I love building beautiful websites
               </h1>
-              <div className="button button-hero" role="button">
+              <HashLink smooth to="#about" className="button button-hero">
                 <div className="button-hero-img"></div>
                 <img src={StyleButton} alt="Style button" />
                 <div className="button-hero-text">
                   <p>ABOUT ME</p>
                 </div>
-              </div>
+              </HashLink>
             </div>
           </picture>
         </div>
       </section>
 
-      <section className="about">
+      <section className="about" id="about">
         <div className="about-container">
           <picture className="about-img">
             <source srcSet={AboutImgDesktop} media="(min-width: 1024px)" />
