@@ -3,6 +3,12 @@
 // HERO PART
 .hero {
 
+  &-img {
+    @include mq(tablet) {
+      position: relative;
+    }
+  }
+
   &-text {
     margin-top: 2.4rem;
 

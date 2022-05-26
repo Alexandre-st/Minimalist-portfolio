@@ -1,18 +1,21 @@
 import { Link, useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
-import { projects } from '../../data/projects';
-import TalkComponent from '../../components/TalkComponent';
+import { projects } from '../data/projects';
+import TalkComponent from '../components/TalkComponent';
+
+import ArrowLeft from '../assets/icons/arrow-left.svg';
+import ArrowRight from '../assets/icons/arrow-right.svg';
 
 const Project = () => {
   const { work } = useParams();
 
   const data = projects;
 
-  const results = data.filter(project => project.title.toLowerCase() === work).map((project) => (
-    project.imgHero.mobile
-  )) 
-  console.log(results);
+  // const results = data.filter(project => project.title.toLowerCase() === work).map((project) => (
+  //   project.imgHero.mobile
+  // )) 
+  // console.log(results);
 
 
   return ( 
@@ -36,14 +39,18 @@ const Project = () => {
               <div className="border" />
               <h1 className="middle-title">{project.title}</h1>
               <p className="small-text">{project.infos}</p>
-              <div className="text-infos">{project.type}</div>
-              <p className="text-infos">{project.technos}</p>
+              <div className="details-aside-text">
+                <p className="text-infos">{project.type}</p>
+                <p className="text-infos">{project.technos}</p>
+              </div>
+              <button className="button button-project">VIEW PROJECT</button>
               <div className="border" />
             </aside>
+
             <div className="details-content">
-              <h2 className="details-content-title">Project Background</h2>
+              <h2 className="little-title">Project Background</h2>
               <p className="small-text">{project.description}</p>
-              <h3 className="details-content-subtitle">Static Previews</h3>
+              <h3 className="little-title">Static Previews</h3>
 
               <picture className="details-content-preview">
                 <source 
@@ -72,12 +79,19 @@ const Project = () => {
 
           <section className="project">
             <div className="project-left">
-              <Link className="project-link" to={`/portfolio/${project.previousProject}`}>{project.previousProject}</Link>
-              <p className="text">Previous Project</p>
+              <img className="project-img" src={ArrowLeft} alt="Arrow towards the previous project" />
+              <Link to={`/portfolio/${project.previousProject}`}>
+                <h4 className="little-title project-link">{project.previousProject}</h4>
+                <p className="text">Previous Project</p>
+              </Link>
             </div>
+            <div className="border border-rotate" />
             <div className="project-right">
-              <Link className="project-link" to={`/portfolio/${project.nextProject}`}>{project.nextProject}</Link>
-              <p className="text">Next Project</p>
+              <img className="project-img" src={ArrowRight} alt="Arrow towards the next project" />
+              <Link to={`/portfolio/${project.nextProject}`}>
+                <h4 className="little-title project-link">{project.nextProject}</h4>
+                <p className="small-text">Next Project</p>
+              </Link>
             </div>
           </section>
         </section>
