@@ -83,8 +83,18 @@ h1, h2, h3, h4 {
   letter-spacing: 2px;
   color: #FFFFFF;
 
+  &:hover {
+    font-size: 1.4rem;
+    transition: all 0.4s ease-in-out;
+  }
+
   &-black {
     color: #33323D;
+
+    &:hover {
+      color: #5FB4A2;
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -113,12 +123,20 @@ h1, h2, h3, h4 {
     height: 4.8rem;
     background-color: #203A4C;
     color: #FFFFFF;
+
+    &:hover {
+      background-color: #5FB4A2;
+      transition: all 0.4s ease-in-out;
+      font-style: italic;
+    }
     
     &:disabled {
       background-color: #FFFFFF;
       border: 1px solid #33323D;
+      font-style: normal;
       color: #33323D;
       opacity: 0.2;
+      cursor: not-allowed;
     }
   }
 }

@@ -24,6 +24,13 @@
   height: 4.8rem;
   text-align: center;
   color: #33323D;
+
+  &:hover {
+    background-color: #33323D;
+    transition: all 0.4s ease-in-out;
+    color: #FFFFFF;
+    font-style: italic;
+  }
 }
 
 // Text ine contact formin

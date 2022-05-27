@@ -89,6 +89,18 @@
   width: 20rem;
   margin-top: 3.2rem;
 
+  &:hover {
+    background-color: #5FB4A2;
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+
+    .button-hero-text {
+      font-style: italic;
+    }
+  }
+
   @include mq(laptop) {
     margin-top: 5.3rem;
   }
