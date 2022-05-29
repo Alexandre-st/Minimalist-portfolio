@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import { useFormik } from 'formik';
 
+import { Modal } from '../components/Modal';
 import GithubImg from '../assets/icons/github.svg';
 import TwitterImg from '../assets/icons/twitter.svg';
 import LinkedinImg from '../assets/icons/linkedin.svg';
 
-
 const Contact = () => {
+  const [showModal, setShowModal] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -30,9 +32,14 @@ const Contact = () => {
     }, 
     onSubmit: (values) => { 
       // console.log("submit", values);
+      openModal();
       formik.resetForm({ values : ''});
     }
   });
+
+  const openModal = () => {
+    setShowModal(true);
+  };
   
   return ( 
     <main className="container">
@@ -45,9 +52,9 @@ const Contact = () => {
               I’d love to hear about what you’re working on and how I could help. I’m currently looking for a new role and am open to a wide range of opportunities. My preference would be to find a position in a company in London. But I’m also happy to hear about opportunites that don’t fit that description. I’m a hard-working and positive person who will always approach each task with a sense of purpose and attention to detail. Please do feel free to check out my online profiles below and get in touch using the form.
             </p>
             <div className="infos-content-social">
-              <img src={GithubImg} alt="Github Link" />
-              <img src={TwitterImg} alt="Twitter Link" />
-              <img src={LinkedinImg} alt="Linkedin Link" />
+              <a href="https://github.com" target="_blank" rel="noreferrer"><img src={GithubImg} alt="Github Link" /></a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer"><img src={TwitterImg} alt="Twitter Link" /></a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><img src={LinkedinImg} alt="Linkedin Link" /></a>
             </div>
           </div>  
         </div>
@@ -88,6 +95,7 @@ const Contact = () => {
               />
               {formik.touched.message && formik.errors.message && <p className="contact-form-error">{formik.errors.message}</p>}
             </div>
+            {showModal ? <Modal setShowModal={setShowModal} /> : null}
             <button 
               className="button button-form" 
               disabled={!(formik.isValid && formik.dirty)} 
