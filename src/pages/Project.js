@@ -12,12 +12,6 @@ const Project = () => {
 
   const data = projects;
 
-  // const results = data.filter(project => project.title.toLowerCase() === work).map((project) => (
-  //   project.imgHero.mobile
-  // )) 
-  // console.log(results);
-
-
   return ( 
     <main className="container">
       { data.filter(project => project.title.toLowerCase() === work).map((project) => (
@@ -61,8 +55,8 @@ const Project = () => {
 
               <picture className="details-content-preview">
                 <source 
-                srcSet={`/images/detail/desktop/${project.preview1}@2x.jpg`} 
-                media="(min-width: 1024px)" 
+                  srcSet={`/images/detail/desktop/${project.preview1}@2x.jpg`} 
+                  media="(min-width: 1024px)" 
                 />
                 <source 
                   srcSet={`/images/detail/tablet/${project.preview1}@2x.jpg`} 

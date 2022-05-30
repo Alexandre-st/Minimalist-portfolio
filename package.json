@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alexandre-st/Minimalist-portfolio"
+    "url": "https://github.com/Alexandre-st/Minimalist-portfolio",
+    "url-live": "https://alexandre-st-mini-portfolio.netlify.app"
   },
   "author": "Alexandre-st <alexandre.saintprix@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
   "keywords": [
     "REACT",
     "SASS"

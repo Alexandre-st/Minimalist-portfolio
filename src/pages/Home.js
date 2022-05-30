@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
-
 import HeroImg from '../assets/homepage/mobile/image-homepage-hero@2x.jpg';
 import HeroImgTablet from '../assets/homepage/tablet/image-homepage-hero@2x.jpg';
 import HeroImgDesktop from '../assets/homepage/desktop/image-homepage-hero@2x.jpg';
